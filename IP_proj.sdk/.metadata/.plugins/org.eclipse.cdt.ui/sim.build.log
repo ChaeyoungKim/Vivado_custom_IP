@@ -1,0 +1,21 @@
+15:06:20 **** Auto Build of configuration Debug for project sim ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../sim_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: sim.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sim_bsp/psu_cortexa53_0/lib -o "sim.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sim.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size sim.elf  |tee "sim.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72728	   4600	  20800	  98128	  17f50	sim.elf
+Finished building: sim.elf.size
+ 
+
+15:06:20 Build Finished (took 678ms)
+

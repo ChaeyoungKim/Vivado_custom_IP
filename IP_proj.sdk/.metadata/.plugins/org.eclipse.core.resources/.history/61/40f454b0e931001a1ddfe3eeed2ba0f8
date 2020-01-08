@@ -1,0 +1,21 @@
+/*#include <stdio.h>
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_io.h"
+#include "myip.h"
+
+int main()
+{
+    u32 led = 0;
+    u32 bias = 0;
+
+    led = MYIP_mReadReg(XPAR_MYIP_0_S_AXI_BASEADDR, 0);
+    printf("led is %u\n", led);
+    led = MYIP_mReadReg(XPAR_MYIP_0_S_AXI_BASEADDR, MYIP_S_AXI_SLV_REG0_OFFSET);
+    bias = MYIP_mReadReg(XPAR_MYIP_0_S_AXI_BASEADDR, MYIP_S_AXI_SLV_REG1_OFFSET);
+    printf("led is %u\n", led);
+    printf("bias is %u\n", bias);
+
+    return 0;
+}
+*/

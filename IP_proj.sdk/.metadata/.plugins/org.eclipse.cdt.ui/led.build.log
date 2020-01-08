@@ -1,0 +1,21 @@
+16:36:26 **** Auto Build of configuration Debug for project led ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: led.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bsp/psu_cortexa53_0/lib -o "led.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: led.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size led.elf  |tee "led.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72600	   4600	  20800	  98000	  17ed0	led.elf
+Finished building: led.elf.size
+ 
+
+16:36:27 Build Finished (took 671ms)
+
